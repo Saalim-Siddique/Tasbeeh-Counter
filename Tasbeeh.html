@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="Images/Fav-icon.jpeg" type="image/x-icon">
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .btn {
+            font-size: 100px;
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            border: none;
+            background-color: #00ff91;
+            color: #000000;
+            cursor: pointer;
+            margin-top: 140px;
+        }
+
+        .btn:active {
+            background-color: #01301c;
+            color: #00ff91;
+        }
+
+        .reset {
+            height: 100px;
+            width: 100px;
+            margin-top: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            background-color: #01301c;
+            color: #00ff91;
+            font-size: 25px;
+            font-weight: bolder;
+            border: none;
+        }
+
+        .reset:active {
+            background-color: #00ff91;
+            color: #000000;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn" class="btn" onclick="increment()">0</button>
+    <button class="reset" onclick="reset()">Reset</button>
+
+
+    <script>
+        let count = 0;
+        function increment() {
+            count++;
+            document.getElementById("btn").innerText = count;
+        }
+
+        function reset() {
+            count = 0;
+            document.getElementById("btn").innerText = count;
+        }
+    </script>
+</body>
+
+</html>
